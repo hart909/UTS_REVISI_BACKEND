@@ -1,0 +1,55 @@
+<!--INI HEro-->
+<div class="hero-slide">
+    <div class="container">
+      <div class="hero-slide-content">
+        <h1>Welcome to Our Website</h1>
+        <p>Discover amazing bluray Here</p>
+        <a href="#" class="cta-button" id="getStartedButton">Get Started</a>
+        <script>
+            const getStartedButton = document.getElementById('getStartedButton');
+          
+            getStartedButton.addEventListener('click', function(e) {
+              e.preventDefault();
+              const scrollHeight = window.innerHeight; // Menggunakan tinggi jendela browser sebagai nilai scrollHeight
+              window.scrollTo({
+                top: scrollHeight,
+                behavior: 'smooth'
+              });
+            });
+          </script>  
+    </div>
+    </div>
+  </div>
+<app-search #appSearch></app-search>
+<app-tags></app-tags>
+<app-not-found [visible]="!films || !films.length"
+resetLinkText="Reset Search">
+</app-not-found>
+
+<ul>
+    <li *ngFor="let film of films">
+        <a routerLink="/film/{{film.id}}">
+            <img [src]="film.imageUrl" [alt]="film.name">
+        <div class="content">
+            <div class="name">
+                {{film.name}}
+            </div>
+            <span class="favorite {{film.favorite?'':'not'}}"> <mat-icon>favorite</mat-icon>
+            </span>
+            <div class="stars">
+                <star-rating [stars]="film.stars"/>
+            </div>
+            
+            <div class="minutes">
+                <span><mat-icon>access_time</mat-icon></span>
+                {{film.minutes}}
+            </div>
+            <div class="price">
+                <span>
+                    {{film.price | currency: 'IDR'}}
+                </span>
+            </div>
+        </div>
+        </a>
+    </li>
+</ul>

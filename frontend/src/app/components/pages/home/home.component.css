@@ -1,0 +1,138 @@
+.hero-slide {
+    position: relative;
+    height: 100vh;
+    background-image: url('../../../../assets/Hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit";
+    font-weight: bold;
+  }
+  
+  .hero-slide-content {
+    text-align: center;
+    color: #fff;
+    
+  }
+  
+  .hero-slide-content h1 {
+    font-family: "Outfit";
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-slide-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-slide-content .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #fdfdfd;
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 40px;
+    font-weight: bold;
+  }
+ul{
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    background-color: black;
+    font-family: "Roboto", "Sans-Serif";
+  }
+  
+  li a{
+    margin-top: 10px;
+    height: 24.5rem;
+    width: 20rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #fbfbfb;
+  }
+  
+  li a:hover{
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  
+  li a img{
+    object-fit:cover;
+    height: 14.5rem;
+  }
+  
+  .content{
+    margin-top: 0.3rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    height: 7rem;
+  }
+  
+  .favorite{
+    color: rgb(139, 1, 1);
+    position: absolute;
+    top: 0.5rem;
+    right: 0rem;
+    font-size: 1.2rem;
+  }
+  
+  .favorite.not{
+    color: rgb(255, 254, 254);
+  }
+  
+  .stars{
+    background-color: black;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-item-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .origins{
+    flex: 9;
+  }
+  
+  .origins span{
+    border-radius: 2rem;
+    background-color: whitesmoke;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: grey;
+    margin-right: 0.3rem;
+    padding: 0 0.5rem;
+    margin-top: 0.2rem;
+  }
+  
+  .cook-time{
+    font-size: 0.9rem;
+    flex: 3;
+    text-align: right;
+  }
+  
+  .price{
+    
+    position: absolute;
+    bottom: 0;
+    left: 0.9rem;
+    background: rgb(0, 0, 0);
+    padding: 0.3rem 100% 0 0;
+    color: #ffffff;
+    margin-bottom: -2.2rem;
+    font-size: 1.1rem;
+  }

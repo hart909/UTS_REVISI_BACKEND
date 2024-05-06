@@ -1,0 +1,43 @@
+<app-not-found
+[visible]="!film"
+notFoundMessage="Film Not Found"
+resetLinkText="Back To Homepage">
+</app-not-found>
+<div *ngIf="film" class="container">
+    <img [src]="film.imageUrl" [alt]="film.name">
+
+
+<div class="details">
+    <div class="header">
+        <span class="name">
+            {{film.name}}
+        </span>
+        <span class="favorite {{film.favorite?'':'not'}}"><mat-icon>favorite</mat-icon></span>
+    </div>
+    <div class="rating">
+        <star-rating [stars]="film.stars"/>
+    </div>
+        <span class="studio">
+        {{film.studio}}
+    </span>
+    <span class="overview">
+        {{film.overview}}
+    </span>
+    <div class="tags">
+        <a *ngFor="let tag of film.tags" routerLink="/tag/{{tag}}">
+        {{tag}}
+        </a>
+    </div>
+    <div class="minutes">
+        <span>
+            Duration : <strong>{{film.minutes}}</strong>
+        </span>
+    </div>
+    <div class="price">
+        <span>
+            {{film.price | currency: 'IDR'}}
+        </span>
+    </div>
+    <button (click)="addToCart()"><mat-icon>add_shopping_cart</mat-icon>Add To Cart</button>
+</div>
+</div>

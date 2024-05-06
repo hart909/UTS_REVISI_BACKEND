@@ -1,0 +1,33 @@
+<link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+<header>
+    <div class="container">
+    <!--Ini Navbar-->
+      <a routerLink="/" class="logo">FGA</a>
+      <nav>
+        <ul>
+          <li *ngIf="!isAuth">
+            <a routerLink="/login">Login</a>
+          </li>
+          <li *ngIf="isAuth" class="menu-container">
+            <a routerLink="/dashboard">{{user.name}}</a>
+            <div class="menu">
+              <a routerLink="/profile">Profile</a>
+              <a routerLink="/orders">Orders</a>
+              <a (click)="logout()">Logout</a>
+            </div>
+          </li>
+          <li>
+            <a routerLink="/cart-page">
+              <mat-icon>shopping_cart</mat-icon><span *ngIf="cartQuantity">{{cartQuantity}}</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/subscription-page">
+              Subscriptions 
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
